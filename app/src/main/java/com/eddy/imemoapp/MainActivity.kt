@@ -1,6 +1,5 @@
 package com.eddy.imemoapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -10,6 +9,7 @@ import android.webkit.WebViewClient
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,7 +35,11 @@ class MainActivity : AppCompatActivity() {
 
 
         webView.webViewClient = object : WebViewClient() {
-            override fun onPageStarted(view: WebView?, url: String?, favicon: android.graphics.Bitmap?) {
+            override fun onPageStarted(
+                view: WebView?,
+                url: String?,
+                favicon: android.graphics.Bitmap?
+            ) {
                 progressBar.visibility = View.VISIBLE
                 webView.visibility = View.INVISIBLE
             }
@@ -61,7 +65,8 @@ class MainActivity : AppCompatActivity() {
                         finish()
                     } else {
                         doubleBackToExitPressedOnce = true
-                        Toast.makeText(this@MainActivity, "한 번 더 누르면 종료됩니다.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@MainActivity, "한 번 더 누르면 종료됩니다.", Toast.LENGTH_SHORT)
+                            .show()
                         handler.postDelayed(backPressRunnable, 2000) // 2초 후에 다시 false로 설정
                     }
                 }
