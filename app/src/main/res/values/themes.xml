@@ -5,7 +5,6 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
         <item name="android:windowLightStatusBar">true</item>
-        // 다크모드에선 @color/black, false로 설정
     </style>
 
     <style name="Theme.IMemoApp" parent="Base.Theme.IMemoApp" />
