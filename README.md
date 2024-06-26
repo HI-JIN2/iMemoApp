@@ -13,3 +13,5 @@
    2. 인증 코드 입력
    3. 브라우저 신뢰함
    4. 자유롭게 사용
+## 참고
+[내 웹 사이트, 앱 스토어에 출시하기 🛫(feat. Android WebView)](https://roian6.hashnode.dev/android-webview)
